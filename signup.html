@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | Constructa Developers</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ANIMATED BACKGROUND
+    ========================== -->
+
+    <div class="background">
+
+        <div class="grid"></div>
+
+        <span class="shape shape-one"></span>
+        <span class="shape shape-two"></span>
+        <span class="shape shape-three"></span>
+
+        <div class="construction construction-one">
+            <i class="fa-solid fa-building"></i>
+        </div>
+
+        <div class="construction construction-two">
+            <i class="fa-solid fa-helmet-safety"></i>
+        </div>
+
+        <div class="construction construction-three">
+            <i class="fa-solid fa-drafting-compass"></i>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PAGE
+    ========================== -->
+
+    <main class="signup-page">
+
+        <div class="signup-wrapper">
+
+
+            <!-- =========================
+                 LEFT VISUAL
+            ========================== -->
+
+            <section class="signup-visual" data-aos="fade-right">
+
+                <a href="index.html" class="brand">
+
+                    <span class="brand-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </span>
+
+                    <span>
+                        CONSTRUCTA
+                        <small>DEVELOPERS</small>
+                    </span>
+
+                </a>
+
+
+                <div class="visual-content">
+
+                    <div class="eyebrow">
+                        <span></span>
+                        CONSTRUCTION / DEVELOPMENT
+                    </div>
+
+                    <h1>
+                        Build your
+                        <span>next chapter.</span>
+                    </h1>
+
+                    <p>
+                        Create your Constructa account and manage
+                        projects, developments, and construction
+                        operations from one powerful platform.
+                    </p>
+
+                </div>
+
+
+                <!-- Construction Icons -->
+
+                <div class="visual-icons">
+
+                    <div>
+                        <i class="fa-solid fa-city"></i>
+                        <span>DEVELOP</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        <span>DESIGN</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-hard-hat"></i>
+                        <span>BUILD</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SIGNUP CARD
+            ========================== -->
+
+            <section class="signup-section" data-aos="fade-left">
+
+                <div class="signup-card">
+
+                    <div class="form-header">
+
+                        <div class="form-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <div>
+                            <span>WELCOME</span>
+                            <h2>Create Account</h2>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORM -->
+
+                    <form id="signupForm">
+
+                        <!-- Name -->
+
+                        <div class="input-group">
+
+                            <label for="name">
+                                FULL NAME
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                            <small class="error-message" id="nameError"></small>
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="input-group">
+
+                            <label for="email">
+                                EMAIL ADDRESS
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+                            <small class="error-message" id="emailError"></small>
+
+                        </div>
+
+
+                        <!-- Role -->
+
+                        <div class="input-group">
+
+                            <label for="role">
+                                SELECT ROLE
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-user-shield"></i>
+
+                                <select id="role" required>
+
+                                    <option value="">
+                                        Choose your role
+                                    </option>
+
+                                    <option value="admin">
+                                        Admin
+                                    </option>
+
+                                    <option value="manager">
+                                        Project Manager
+                                    </option>
+
+                                
+
+                                </select>
+
+                                <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                            </div>
+
+                            <small class="error-message" id="roleError"></small>
+
+                        </div>
+
+
+                        <!-- Password -->
+
+                        <div class="input-group">
+
+                            <label for="password">
+                                PASSWORD
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Create a password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="passwordToggle"
+                                    aria-label="Show password">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                            <small class="error-message" id="passwordError"></small>
+
+                        </div>
+
+
+                        <!-- Confirm Password -->
+
+                        <div class="input-group">
+
+                            <label for="confirmPassword">
+                                CONFIRM PASSWORD
+                            </label>
+
+                            <div class="input-box">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    placeholder="Confirm your password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="confirmToggle"
+                                    aria-label="Show password">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                            <small class="error-message" id="confirmError"></small>
+
+                        </div>
+
+
+                        <!-- Terms -->
+
+                        <label class="terms">
+
+                            <input type="checkbox" id="terms">
+
+                            <span class="custom-check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <span>
+                                I agree to the
+                                <a href="#">Terms & Conditions</a>
+                            </span>
+
+                        </label>
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            class="signup-btn">
+
+                            <span>
+                                Create Account
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <!-- Success -->
+
+                        <div class="form-message" id="formMessage"></div>
+
+                    </form>
+
+
+                    <!-- Login -->
+
+                    <div class="login-link">
+
+                        Already have an account?
+
+                        <a href="login.html">
+                            Login
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- AOS -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="js/signup.js"></script>
+
+</body>
+</html>
