@@ -1,0 +1,1246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Manager | Constructa Developers</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/viewer.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     ANIMATED BACKGROUND
+===================================================== -->
+
+<div class="background-animation">
+    <span class="bg-circle circle-one"></span>
+    <span class="bg-circle circle-two"></span>
+    <span class="bg-circle circle-three"></span>
+
+    <div class="grid-lines"></div>
+</div>
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-logo">
+       <a href="#dashboard" class="logo">
+          <span class="logo-mark">
+          <img src="./assets/img1.webp" alt="Constructa Developers Logo">
+           </span>
+             </a>
+    </div>
+
+
+    <!-- Profile -->
+
+    <div class="manager-profile">
+
+        <div class="manager-avatar">
+            <i class="fa-solid fa-user-tie"></i>
+        </div>
+
+        <div>
+            <h3 id="managerName">Project Manager</h3>
+            <span>
+                <i class="fa-solid fa-circle"></i>
+                Project Manager
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-nav">
+
+        <p class="nav-title">MAIN MENU</p>
+
+        <a href="#dashboard" class="nav-link active" data-section="dashboard">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="#projects" class="nav-link" data-section="projects">
+            <i class="fa-solid fa-building"></i>
+            <span>Projects</span>
+            <b>08</b>
+        </a>
+
+        <a href="#tasks" class="nav-link" data-section="tasks">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Tasks</span>
+            <b>14</b>
+        </a>
+
+        <a href="#team" class="nav-link" data-section="team">
+            <i class="fa-solid fa-users"></i>
+            <span>Team</span>
+        </a>
+
+        <a href="#clients" class="nav-link" data-section="clients">
+            <i class="fa-solid fa-user-group"></i>
+            <span>Clients</span>
+        </a>
+
+        <a href="#reports" class="nav-link" data-section="reports">
+            <i class="fa-solid fa-chart-column"></i>
+            <span>Reports</span>
+        </a>
+
+        <a href="#contact" class="nav-link" data-section="contact">
+            <i class="fa-solid fa-address-book"></i>
+            <span>Contact</span>
+        </a>
+
+
+        <p class="nav-title">ACCOUNT</p>
+
+        <a href="#settings" class="nav-link" data-section="settings">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+
+        <a href="login.html" class="nav-link logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="page-heading">
+            <span>PROJECT MANAGEMENT</span>
+            <h1 id="pageTitle">Manager Dashboard</h1>
+        </div>
+
+
+        <div class="topbar-right">
+
+            <button class="notification-btn" id="notificationBtn">
+                <i class="fa-regular fa-bell"></i>
+                <span>3</span>
+            </button>
+
+            <div class="top-profile">
+
+                <div class="top-avatar">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+                <div>
+                    <strong id="topManagerName">Project Manager</strong>
+                    <small>Project Manager</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         DASHBOARD SECTION
+    ================================================== -->
+
+    <section class="dashboard-section active-section" id="dashboard">
+
+        <div class="welcome-banner" data-aos="fade-up">
+
+            <div class="welcome-content">
+
+                <span class="section-label">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                    PROJECT CONTROL CENTER
+                </span>
+
+                <h2>
+                    Manage projects.<br>
+                    <strong>Build better.</strong>
+                </h2>
+
+                <p>
+                    Monitor construction progress, manage your team,
+                    track deadlines and keep every project moving.
+                </p>
+
+                <button class="primary-btn" data-go="projects">
+                    View Projects
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <div class="welcome-image">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=85"
+                     alt="Construction project">
+            </div>
+
+        </div>
+
+
+        <!-- STATS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card" data-aos="fade-up">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <div>
+                    <span>Active Projects</span>
+                    <h3 data-count="08">0</h3>
+                    <small>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        12% this month
+                    </small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+
+                <div>
+                    <span>Pending Tasks</span>
+                    <h3 data-count="14">0</h3>
+                    <small>Needs attention</small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+                    <span>Team Members</span>
+                    <h3 data-count="32">0</h3>
+                    <small>Across projects</small>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div>
+                    <span>Completed</span>
+                    <h3 data-count="24">0</h3>
+                    <small>Projects delivered</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT OVERVIEW -->
+
+        <div class="content-grid">
+
+            <div class="panel large-panel" data-aos="fade-up">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span>PROJECT OVERVIEW</span>
+                        <h2>Current Projects</h2>
+                    </div>
+
+                    <button class="text-btn" data-go="projects">
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="project-mini-list">
+
+                    <article class="project-mini">
+
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=500&q=80"
+                             alt="Skyline Heights">
+
+                        <div class="project-mini-content">
+
+                            <div class="project-title-row">
+                                <h3>Skyline Heights</h3>
+                                <span class="status active">Active</span>
+                            </div>
+
+                            <p>Hyderabad • Residential</p>
+
+                            <div class="progress-info">
+                                <span>Progress</span>
+                                <strong>78%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <span style="width:78%"></span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-mini">
+
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80"
+                             alt="Urban Tower">
+
+                        <div class="project-mini-content">
+
+                            <div class="project-title-row">
+                                <h3>Urban Business Tower</h3>
+                                <span class="status planning">Planning</span>
+                            </div>
+
+                            <p>Secunderabad • Commercial</p>
+
+                            <div class="progress-info">
+                                <span>Progress</span>
+                                <strong>42%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <span style="width:42%"></span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-mini">
+
+                        <img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=500&q=80"
+                             alt="Green Valley">
+
+                        <div class="project-mini-content">
+
+                            <div class="project-title-row">
+                                <h3>Green Valley Villas</h3>
+                                <span class="status active">Active</span>
+                            </div>
+
+                            <p>Gachibowli • Villas</p>
+
+                            <div class="progress-info">
+                                <span>Progress</span>
+                                <strong>64%</strong>
+                            </div>
+
+                            <div class="progress">
+                                <span style="width:64%"></span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- DEADLINES -->
+
+            <div class="panel" data-aos="fade-up">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span>UPCOMING</span>
+                        <h2>Deadlines</h2>
+                    </div>
+
+                    <i class="fa-regular fa-calendar panel-header-icon"></i>
+
+                </div>
+
+
+                <div class="deadline-list">
+
+                    <div class="deadline-item">
+                        <div class="deadline-date">
+                            <strong>12</strong>
+                            <span>SEP</span>
+                        </div>
+
+                        <div>
+                            <h3>Foundation Inspection</h3>
+                            <p>Skyline Heights</p>
+                        </div>
+                    </div>
+
+
+                    <div class="deadline-item">
+                        <div class="deadline-date">
+                            <strong>16</strong>
+                            <span>SEP</span>
+                        </div>
+
+                        <div>
+                            <h3>Client Presentation</h3>
+                            <p>Urban Business Tower</p>
+                        </div>
+                    </div>
+
+
+                    <div class="deadline-item">
+                        <div class="deadline-date">
+                            <strong>21</strong>
+                            <span>SEP</span>
+                        </div>
+
+                        <div>
+                            <h3>Material Delivery</h3>
+                            <p>Green Valley Villas</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PROJECTS
+    ================================================== -->
+
+    <section class="dashboard-section" id="projects">
+
+        <div class="section-top">
+
+            <div>
+                <span class="section-label">PROJECT MANAGEMENT</span>
+                <h2>All Projects</h2>
+                <p>Track every construction project from one place.</p>
+            </div>
+
+            <button class="primary-btn"
+            onclick="window.location.href='404.html'">
+                <i class="fa-solid fa-plus"></i>
+                Add Project
+            </button>
+
+        </div>
+
+
+        <div class="project-grid">
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
+                         alt="Skyline Heights">
+
+                    <span class="status active">Active</span>
+                </div>
+
+                <div class="project-card-body">
+
+                    <span>RESIDENTIAL</span>
+                    <h3>Skyline Heights</h3>
+                    <p>Premium residential development</p>
+
+                    <div class="project-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Hyderabad
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Dec 2026
+                        </span>
+                    </div>
+
+                    <div class="progress-info">
+                        <span>Project Progress</span>
+                        <strong>78%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:78%"></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85"
+                         alt="Business Tower">
+
+                    <span class="status planning">Planning</span>
+                </div>
+
+                <div class="project-card-body">
+
+                    <span>COMMERCIAL</span>
+                    <h3>Urban Business Tower</h3>
+                    <p>Modern commercial office development</p>
+
+                    <div class="project-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Secunderabad
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Mar 2027
+                        </span>
+                    </div>
+
+                    <div class="progress-info">
+                        <span>Project Progress</span>
+                        <strong>42%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:42%"></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?auto=format&fit=crop&w=1000&q=85"
+                         alt="Green Valley Villas">
+
+                    <span class="status active">Active</span>
+                </div>
+
+                <div class="project-card-body">
+
+                    <span>VILLAS</span>
+                    <h3>Green Valley Villas</h3>
+                    <p>Luxury villa community project</p>
+
+                    <div class="project-meta">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Gachibowli
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Jan 2027
+                        </span>
+                    </div>
+
+                    <div class="progress-info">
+                        <span>Project Progress</span>
+                        <strong>64%</strong>
+                    </div>
+
+                    <div class="progress">
+                        <span style="width:64%"></span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         TASKS
+    ================================================== -->
+
+    <section class="dashboard-section" id="tasks">
+
+        <div class="section-top">
+
+            <div>
+                <span class="section-label">WORK MANAGEMENT</span>
+                <h2>Project Tasks</h2>
+                <p>Monitor pending and completed construction tasks.</p>
+            </div>
+
+            <button class="primary-btn"
+            onclick="window.location.href='404.html'">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+
+        </div>
+
+
+        <div class="task-panel">
+
+            <div class="task-row">
+                <div class="task-check completed">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="task-content">
+                    <h3>Site Survey Completed</h3>
+                    <p>Skyline Heights</p>
+                </div>
+
+                <span class="task-status completed-status">Completed</span>
+            </div>
+
+
+            <div class="task-row">
+                <div class="task-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="task-content">
+                    <h3>Foundation Inspection</h3>
+                    <p>Skyline Heights</p>
+                </div>
+
+                <span class="task-status pending-status">Pending</span>
+            </div>
+
+
+            <div class="task-row">
+                <div class="task-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="task-content">
+                    <h3>Material Procurement</h3>
+                    <p>Green Valley Villas</p>
+                </div>
+
+                <span class="task-status progress-status">In Progress</span>
+            </div>
+
+
+            <div class="task-row">
+                <div class="task-check">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="task-content">
+                    <h3>Architectural Review</h3>
+                    <p>Urban Business Tower</p>
+                </div>
+
+                <span class="task-status pending-status">Pending</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         TEAM
+    ================================================== -->
+
+    <section class="dashboard-section" id="team">
+
+        <div class="section-top">
+            <div>
+                <span class="section-label">TEAM MANAGEMENT</span>
+                <h2>Project Team</h2>
+                <p>Manage your construction team members.</p>
+            </div>
+
+            <button class="primary-btn"
+            onclick="window.location.href='404.html'">
+                <i class="fa-solid fa-user-plus"></i>
+                Add Member
+            </button>
+        </div>
+
+
+        <div class="team-grid">
+
+            <article class="team-card">
+
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=85"
+                     alt="Team member">
+
+                <div>
+                    <h3>Arjun Kumar</h3>
+                    <span>Site Engineer</span>
+                </div>
+
+                <i class="fa-solid fa-circle-check team-online"></i>
+
+            </article>
+
+
+            <article class="team-card">
+
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=85"
+                     alt="Team member">
+
+                <div>
+                    <h3>Riya Sharma</h3>
+                    <span>Architect</span>
+                </div>
+
+                <i class="fa-solid fa-circle-check team-online"></i>
+
+            </article>
+
+
+            <article class="team-card">
+
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=85"
+                     alt="Team member">
+
+                <div>
+                    <h3>Prakash Menon</h3>
+                    <span>Construction Lead</span>
+                </div>
+
+                <i class="fa-solid fa-circle-check team-online"></i>
+
+            </article>
+
+
+            <article class="team-card">
+
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=85"
+                     alt="Team member">
+
+                <div>
+                    <h3>Vikram Rao</h3>
+                    <span>Safety Manager</span>
+                </div>
+
+                <i class="fa-solid fa-circle-check team-online"></i>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CLIENTS
+    ================================================== -->
+
+    <section class="dashboard-section" id="clients">
+
+        <div class="section-top">
+            <div>
+                <span class="section-label">CLIENT MANAGEMENT</span>
+                <h2>Clients</h2>
+                <p>Manage project clients and relationships.</p>
+            </div>
+        </div>
+
+
+        <div class="client-grid">
+
+            <div class="client-card">
+                <div class="client-logo">AH</div>
+                <div>
+                    <h3>Aria Holdings</h3>
+                    <p>Skyline Heights</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+
+            <div class="client-card">
+                <div class="client-logo">VG</div>
+                <div>
+                    <h3>Vertex Group</h3>
+                    <p>Urban Business Tower</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+
+            <div class="client-card">
+                <div class="client-logo">GV</div>
+                <div>
+                    <h3>Green Ventures</h3>
+                    <p>Green Valley Villas</p>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         REPORTS
+    ================================================== -->
+
+    <section class="dashboard-section" id="reports">
+
+        <div class="section-top">
+            <div>
+                <span class="section-label">ANALYTICS</span>
+                <h2>Project Reports</h2>
+                <p>Review project performance and completion data.</p>
+            </div>
+        </div>
+
+
+        <div class="report-grid">
+
+            <div class="report-card">
+
+                <div class="report-header">
+                    <div>
+                        <span>PROJECT COMPLETION</span>
+                        <h3>78%</h3>
+                    </div>
+
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div class="fake-chart">
+                    <span style="height:35%"></span>
+                    <span style="height:55%"></span>
+                    <span style="height:42%"></span>
+                    <span style="height:70%"></span>
+                    <span style="height:60%"></span>
+                    <span style="height:85%"></span>
+                    <span style="height:95%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <div class="report-header">
+                    <div>
+                        <span>TASK COMPLETION</span>
+                        <h3>86%</h3>
+                    </div>
+
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+
+                <div class="large-progress">
+                    <span style="width:86%"></span>
+                </div>
+
+                <p>86% of assigned tasks are completed.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CONTACT
+    ================================================== -->
+
+    <section class="dashboard-section" id="contact">
+
+        <div class="section-top">
+
+            <div>
+                <span class="section-label">COMMUNICATION</span>
+                <h2>Contact Center</h2>
+                <p>Manage client enquiries, calls and project communication.</p>
+            </div>
+
+            <button class="primary-btn"
+            onclick="window.location.href='404.html'">
+                <i class="fa-solid fa-plus"></i>
+                New Enquiry
+            </button>
+
+        </div>
+
+
+        <!-- Contact Hero -->
+
+        <div class="contact-hero">
+
+            <div class="contact-hero-content">
+
+                <span class="section-label">
+                    <i class="fa-solid fa-headset"></i>
+                    CLIENT SUPPORT
+                </span>
+
+                <h2>
+                    Keep every<br>
+                    <strong>conversation moving.</strong>
+                </h2>
+
+                <p>
+                    Stay connected with clients, respond to enquiries
+                    and coordinate project requirements from one place.
+                </p>
+
+                <div class="contact-info-row">
+
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>projects@Stacklyconstructa.com</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-hero-image">
+
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+                     alt="Construction project meeting">
+
+            </div>
+
+        </div>
+
+
+        <!-- Contact Stats -->
+
+        <div class="contact-stats">
+
+            <div class="contact-stat">
+                <i class="fa-solid fa-inbox"></i>
+                <div>
+                    <span>New Enquiries</span>
+                    <strong>12</strong>
+                </div>
+            </div>
+
+            <div class="contact-stat">
+                <i class="fa-solid fa-phone-volume"></i>
+                <div>
+                    <span>Today's Calls</span>
+                    <strong>08</strong>
+                </div>
+            </div>
+
+            <div class="contact-stat">
+                <i class="fa-solid fa-calendar-days"></i>
+                <div>
+                    <span>Site Visits</span>
+                    <strong>05</strong>
+                </div>
+            </div>
+
+            <div class="contact-stat">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <span>Pending Reply</span>
+                    <strong>04</strong>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Enquiries -->
+
+        <div class="panel contact-panel">
+
+            <div class="panel-header">
+
+                <div>
+                    <span>CLIENT ENQUIRIES</span>
+                    <h2>Recent Messages</h2>
+                </div>
+
+                <button class="text-btn"
+                onclick="window.location.href='404.html'">
+                    View All
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <div class="contact-list">
+
+                <article class="contact-item">
+
+                    <div class="contact-avatar">
+                        AK
+                    </div>
+
+                    <div class="contact-details">
+                        <h3>Arun Kumar</h3>
+                        <p>Interested in Skyline Heights</p>
+                        <small>
+                            <i class="fa-regular fa-envelope"></i>
+                            arun@example.com
+                        </small>
+                    </div>
+
+                    <span class="contact-status new">New</span>
+
+                    <button class="contact-action"
+                    onclick="window.location.href='404.html'">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </article>
+
+
+                <article class="contact-item">
+
+                    <div class="contact-avatar">
+                        PS
+                    </div>
+
+                    <div class="contact-details">
+                        <h3>Priya Sharma</h3>
+                        <p>Villa project enquiry</p>
+                        <small>
+                            <i class="fa-solid fa-phone"></i>
+                            +91 91234 56789
+                        </small>
+                    </div>
+
+                    <span class="contact-status replied">Replied</span>
+
+                    <button class="contact-action"
+                    onclick="window.location.href='404.html'">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </article>
+
+
+                <article class="contact-item">
+
+                    <div class="contact-avatar">
+                        RM
+                    </div>
+
+                    <div class="contact-details">
+                        <h3>Rahul Mehta</h3>
+                        <p>Commercial building enquiry</p>
+                        <small>
+                            <i class="fa-regular fa-envelope"></i>
+                            rahul@example.com
+                        </small>
+                    </div>
+
+                    <span class="contact-status pending">Pending</span>
+
+                    <button class="contact-action"
+                    onclick="window.location.href='404.html'">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- Office Contact Cards -->
+
+        <div class="office-contact-grid">
+
+            <div class="office-card">
+                <div class="office-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                    <span>HEAD OFFICE</span>
+                    <h3>Hyderabad, Telangana</h3>
+                    <p>Constructa Developers HQ</p>
+                </div>
+            </div>
+
+
+            <div class="office-card">
+                <div class="office-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                    <span>CALL US</span>
+                    <h3>+91 98765 43210</h3>
+                    <p>Mon - Sat / 9:00 AM - 7:00 PM</p>
+                </div>
+            </div>
+
+
+            <div class="office-card">
+                <div class="office-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <span>EMAIL</span>
+                    <h3>hello@constructa.com</h3>
+                    <p>We reply within 24 hours</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SETTINGS
+    ================================================== -->
+
+    <section class="dashboard-section" id="settings">
+
+        <div class="section-top">
+            <div>
+                <span class="section-label">ACCOUNT</span>
+                <h2>Settings</h2>
+                <p>Manage your project manager profile.</p>
+            </div>
+        </div>
+
+
+        <div class="settings-card">
+
+            <div class="settings-avatar">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+
+            <div class="settings-form">
+
+                <label>
+                    Full Name
+                    <input type="text" id="settingName" value="Project Manager">
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" id="settingEmail" value="manager@constructa.com">
+                </label>
+
+                <label>
+                    Role
+                    <select id="settingRole">
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Viewer">Viewer</option>
+                    </select>
+                </label>
+
+                <button class="primary-btn" id="saveSettings">
+                    <i class="fa-solid fa-check"></i>
+                    Save Changes
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="dashboard-footer">
+        <span>© 2026 Constructa Developers</span>
+        <span>Project Management System</span>
+    </footer>
+
+</main>
+
+
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- JS -->
+<script src="js/viewer.js"></script>
+
+</body>
+</html>
