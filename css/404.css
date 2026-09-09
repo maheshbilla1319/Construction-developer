@@ -1,0 +1,1087 @@
+
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --black: #0a0a0a;
+    --dark: #111111;
+    --dark-2: #161616;
+    --line: #292929;
+    --gray: #777777;
+    --white: #ffffff;
+    --orange: #f59e0b;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--black);
+    color: var(--white);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    width: min(1180px, calc(100% - 50px));
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.error-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    width: 100%;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-inner {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.error-logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo-box {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--orange);
+    color: var(--black);
+
+    font-size: 18px;
+
+    transition: 0.4s ease;
+}
+
+.error-logo:hover .logo-box {
+    transform: rotate(-6deg);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo-text small {
+    margin-top: 2px;
+
+    color: var(--gray);
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+
+/* Home */
+
+.header-home {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 17px;
+
+    border: 1px solid var(--line);
+
+    color: #aaa;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+}
+
+.header-home i {
+    font-size: 9px;
+}
+
+.header-home:hover {
+    border-color: var(--orange);
+    background: var(--orange);
+    color: var(--black);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.error-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 130px 0 70px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.error-background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(245, 158, 11, 0.09),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #080808,
+            #111111 55%,
+            #090909
+        );
+
+    z-index: -3;
+}
+
+
+/* =========================================================
+   BLUEPRINT GRID
+========================================================= */
+
+.blueprint-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 20%,
+        black 80%,
+        transparent
+    );
+
+    opacity: 0.45;
+
+    z-index: -2;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.error-container {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+
+/* =========================================================
+   ERROR CONTENT
+========================================================= */
+
+.error-content {
+    max-width: 650px;
+}
+
+
+/* Label */
+
+.error-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: #888;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.error-label span {
+    width: 28px;
+    height: 2px;
+
+    background: var(--orange);
+}
+
+
+/* =========================================================
+   ERROR NUMBER
+========================================================= */
+
+.error-number {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(110px, 15vw, 210px);
+    font-weight: 700;
+
+    line-height: 0.85;
+
+    letter-spacing: -15px;
+}
+
+.error-number > span {
+    display: block;
+
+    color: var(--white);
+
+    text-shadow:
+        12px 12px 0 rgba(245, 158, 11, 0.08);
+}
+
+.error-number .zero {
+    width: 0.65em;
+    height: 0.65em;
+
+    margin: 0 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 8px solid var(--orange);
+    border-radius: 50%;
+
+    color: var(--orange);
+
+    font-size: 0.25em;
+    letter-spacing: 0;
+
+    animation: rotateCompass 8s linear infinite;
+}
+
+.error-number .zero i {
+    animation: counterRotate 8s linear infinite;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.error-content h1 {
+    max-width: 600px;
+
+    margin-bottom: 20px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(34px, 4vw, 55px);
+    font-weight: 600;
+
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.error-content h1 span {
+    display: block;
+
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.error-content p {
+    max-width: 540px;
+
+    margin-bottom: 32px;
+
+    color: #999;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.error-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.primary-btn,
+.secondary-btn {
+    min-height: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 0 21px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: all 0.35s ease;
+}
+
+
+/* Primary */
+
+.primary-btn {
+    background: var(--orange);
+    color: var(--black);
+}
+
+.primary-btn i {
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: var(--white);
+    transform: translateY(-4px);
+}
+
+.primary-btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* Secondary */
+
+.secondary-btn {
+    border: 1px solid var(--line);
+
+    background: transparent;
+    color: #aaa;
+}
+
+.secondary-btn i {
+    transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+    transform: translateY(-4px);
+}
+
+.secondary-btn:hover i {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.error-visual {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   BLUEPRINT CARD
+========================================================= */
+
+.blueprint-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 500px;
+
+    border: 1px solid #303030;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        #101010;
+
+    background-size: 30px 30px;
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,0.5);
+
+    transform: perspective(900px) rotateY(-7deg);
+
+    transition: 0.5s ease;
+}
+
+.blueprint-card:hover {
+    transform:
+        perspective(900px)
+        rotateY(0deg)
+        translateY(-8px);
+}
+
+
+/* =========================================================
+   BLUEPRINT HEADER
+========================================================= */
+
+.blueprint-header {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    border-bottom: 1px solid #303030;
+
+    color: #777;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   DRAWING
+========================================================= */
+
+.drawing {
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+}
+
+
+/* Ground */
+
+.ground {
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+    bottom: 65px;
+
+    height: 1px;
+
+    background: #555;
+}
+
+.ground::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: -7px;
+
+    width: 100%;
+    height: 1px;
+
+    border-top: 1px dashed #333;
+}
+
+
+/* Buildings */
+
+.building {
+    position: absolute;
+
+    bottom: 66px;
+
+    border: 1px solid #666;
+
+    background: rgba(245, 158, 11, 0.025);
+}
+
+.building-one {
+    left: 12%;
+
+    width: 90px;
+    height: 145px;
+}
+
+.building-two {
+    left: 38%;
+
+    width: 120px;
+    height: 215px;
+
+    border-color: var(--orange);
+}
+
+.building-three {
+    right: 10%;
+
+    width: 80px;
+    height: 125px;
+}
+
+
+/* Windows */
+
+.windows {
+    width: 100%;
+    height: 100%;
+
+    padding: 15px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+.windows span {
+    border: 1px solid #555;
+
+    background: rgba(245, 158, 11, 0.15);
+
+    animation: windowBlink 3s infinite alternate;
+}
+
+.building-two .windows span {
+    border-color: rgba(245, 158, 11, 0.6);
+}
+
+
+/* =========================================================
+   DIMENSIONS
+========================================================= */
+
+.dimension {
+    position: absolute;
+
+    color: #666;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.dimension-one {
+    top: 55px;
+    left: 38%;
+
+    writing-mode: vertical-rl;
+}
+
+.dimension-two {
+    right: 7%;
+    bottom: 115px;
+}
+
+
+/* =========================================================
+   BLUEPRINT FOOTER
+========================================================= */
+
+.blueprint-footer {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    border-top: 1px solid #303030;
+
+    color: #777;
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.blueprint-footer i {
+    margin-right: 6px;
+
+    color: var(--orange);
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.floating-card {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #333;
+
+    background: rgba(17,17,17,0.95);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+
+    color: #aaa;
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    backdrop-filter: blur(10px);
+}
+
+.card-one {
+    left: -35px;
+    top: 95px;
+
+    animation: floatOne 4s ease-in-out infinite;
+}
+
+.card-one i {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--orange);
+    color: var(--black);
+
+    font-size: 13px;
+}
+
+.card-one div {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-one strong {
+    color: var(--white);
+    font-size: 9px;
+}
+
+.card-one small {
+    margin-top: 3px;
+
+    color: #666;
+    font-size: 7px;
+}
+
+
+.card-two {
+    right: -25px;
+    bottom: 80px;
+
+    animation: floatTwo 4.5s ease-in-out infinite;
+}
+
+.pulse {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    box-shadow:
+        0 0 0 5px rgba(245,158,11,0.1);
+
+    animation: pulse 2s infinite;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.error-bottom {
+    position: absolute;
+
+    left: 50%;
+    bottom: 25px;
+
+    width: min(1180px, calc(100% - 50px));
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #444;
+
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes rotateCompass {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes counterRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes windowBlink {
+
+    0% {
+        opacity: 0.35;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes floatOne {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes floatTwo {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(245,158,11,0.4);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 7px rgba(245,158,11,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(245,158,11,0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1000px
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .error-container {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .error-content {
+        max-width: 700px;
+    }
+
+    .error-visual {
+        min-height: 470px;
+    }
+
+    .blueprint-card {
+        max-width: 600px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: min(100% - 32px, 600px);
+    }
+
+    .header-inner {
+        height: 75px;
+    }
+
+    .logo-box {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .header-home {
+        padding: 10px 12px;
+    }
+
+    .error-page {
+        padding-top: 115px;
+        padding-bottom: 80px;
+    }
+
+    .error-number {
+        font-size: clamp(90px, 25vw, 150px);
+
+        letter-spacing: -9px;
+    }
+
+    .error-number .zero {
+        border-width: 6px;
+    }
+
+    .error-content h1 {
+        font-size: 35px;
+    }
+
+    .error-content p {
+        font-size: 14px;
+    }
+
+    .error-actions {
+        flex-wrap: wrap;
+    }
+
+    .error-visual {
+        min-height: 420px;
+    }
+
+    .card-one {
+        left: -5px;
+    }
+
+    .card-two {
+        right: -5px;
+    }
+
+    .drawing {
+        height: 290px;
+    }
+
+    .building-one {
+        height: 120px;
+        width: 70px;
+    }
+
+    .building-two {
+        height: 175px;
+        width: 95px;
+    }
+
+    .building-three {
+        height: 105px;
+        width: 65px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .header-home span {
+        display: none;
+    }
+
+    .error-number {
+        font-size: 105px;
+
+        letter-spacing: -7px;
+    }
+
+    .error-content h1 {
+        font-size: 29px;
+        letter-spacing: -1px;
+    }
+
+    .error-content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .error-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .error-visual {
+        min-height: 350px;
+    }
+
+    .blueprint-card {
+        transform: none;
+    }
+
+    .drawing {
+        height: 240px;
+    }
+
+    .blueprint-header,
+    .blueprint-footer {
+        padding: 0 13px;
+    }
+
+    .card-one {
+        top: 50px;
+        left: -2px;
+    }
+
+    .card-two {
+        right: -2px;
+        bottom: 35px;
+    }
+
+    .error-bottom {
+        width: calc(100% - 32px);
+
+        font-size: 7px;
+    }
+
+    .error-bottom span:last-child {
+        display: none;
+    }
+
+}

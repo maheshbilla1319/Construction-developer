@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Constructa Developers</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="background">
+        <div class="grid"></div>
+
+        <span class="shape shape-1"></span>
+        <span class="shape shape-2"></span>
+        <span class="shape shape-3"></span>
+
+        <i class="floating-icon fa-solid fa-building"></i>
+        <i class="floating-icon fa-solid fa-hard-hat"></i>
+        <i class="floating-icon fa-solid fa-ruler-combined"></i>
+        <i class="floating-icon fa-solid fa-compass-drafting"></i>
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="login-header">
+
+   <a href="index.html" class="logo">
+    <span class="logo-mark">
+        <img src="./assets/cd6.png" alt="Constructa Developers Logo">
+    </span>
+</a>
+
+
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back Home
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         LOGIN AREA
+    ========================== -->
+
+    <main class="login-page">
+
+        <div class="login-container">
+
+
+            <!-- LEFT CONTENT -->
+
+            <section class="login-info" data-aos="fade-right">
+
+                <span class="eyebrow">
+                    <span></span>
+                    CONSTRUCTA DEVELOPERS
+                </span>
+
+                <h1>
+                    Build.
+                    <span>Manage.</span>
+                    Grow.
+                </h1>
+
+                <p>
+                    Access your Constructa Developers workspace
+                    and manage projects, teams and construction
+                    operations from one powerful dashboard.
+                </p>
+
+
+                <div class="login-features">
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div>
+                            <strong>Project Management</strong>
+                            <small>
+                                Manage projects and progress
+                            </small>
+                        </div>
+                    </div>
+
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <strong>Team Management</strong>
+                            <small>
+                                Keep your construction team connected
+                            </small>
+                        </div>
+                    </div>
+
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <strong>Secure Workspace</strong>
+                            <small>
+                                Your workspace stays protected
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOGIN CARD -->
+
+            <section class="login-card" data-aos="fade-left">
+
+                <div class="card-top">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </div>
+
+                    <div>
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to your account</p>
+                    </div>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+
+                <form id="loginForm" novalidate>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+                        <small class="error" id="emailError"></small>
+
+                    </div>
+
+
+                    <!-- ROLE -->
+
+                    <div class="form-group">
+
+                        <label for="loginRole">
+                            Select Role
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user-shield"></i>
+<select id="loginRole">
+
+    <option value="">
+        Select your role
+    </option>
+
+    <option value="admin">
+        Admin
+    </option>
+
+    <option value="viewer">
+       viewer
+    </option>
+    
+
+</select>
+
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                        </div>
+
+                        <small class="error" id="roleError"></small>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+<a href="404.html" id="forgotPassword">
+    Forgot Password?
+</a>
+
+
+                        </div>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                        <small class="error" id="passwordError"></small>
+
+                    </div>
+
+
+                    <!-- REMEMBER -->
+
+                    <div class="form-options">
+
+                        <label class="remember">
+
+                            <input type="checkbox" id="rememberMe">
+
+                            <span class="custom-check">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            Remember me
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div id="loginMessage" class="login-message"></div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button type="submit" class="login-btn" id="loginBtn">
+
+                        <span>Login</span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <!-- SIGNUP -->
+
+                    <div class="signup-link">
+
+                        Don't have an account?
+
+                        <a href="signup.html">
+                            Create Account
+                        </a>
+
+                    </div>
+
+                </form>
+
+
+                <!-- SECURITY -->
+
+                <div class="security-note">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <span>
+                        Secure login protected by Constructa
+                    </span>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         SCRIPTS
+    ========================== -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>
+
